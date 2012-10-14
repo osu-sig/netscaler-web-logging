@@ -1,15 +1,15 @@
-## NetScaler Web Logging
+# NetScaler Web Logging
 
 init scripts for the NetScaler web logging agent
 
-# Requirements
+## Requirements
 
 * NetScaler Web Logging agent
 
-# Install
+## Install
 
 Checkout wiki pages for installation information, migration, etc.
 
-# License
+## License
 
 see LICENSE
