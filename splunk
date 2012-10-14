@@ -1,0 +1,33 @@
+#!/bin/bash
+#
+# splunforwarder		Start up the Splunk forwarding daemon
+
+### BEGIN INIT INFO
+# Provides: splunks
+# Required-Start: $local_fs $network $syslog
+# Required-Stop: $local_fs $syslog
+# Should-Start: $syslog
+# Should-Stop: $network $syslog
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: Start up the splunkforwarder daemon
+# Description:       ships data to splunk
+### END INIT INFO
+
+# source function library
+. /etc/rc.d/init.d/functions
+
+case "$1" in
+	start)
+		echo -n "starting splunkforwarder"
+		/opt/splunkforwarder/bin/splunk start
+		;;
+	stop)
+		echo -n "stoping splunkforwarder"
+		/opt/splunkforwarder/bin/splunk stop
+		;;
+	restart)
+		echo -n "restarting splunkforwarder"
+		/opt/splunkforwarder/bin/splunk restart
+		;;
+esac
